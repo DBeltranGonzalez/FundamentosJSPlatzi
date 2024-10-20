@@ -13,4 +13,4 @@ let frase = 'JavaScript es extremadamente genial';
 console.log(frase.length); //Conteo de caracteres
 console.log(frase.toLowerCase()); //Pasar todo a minúsculas
 console.log(frase.toUpperCase()); //Pasar todo a mayúsculas
-console.log(frase.substring(0,10)); 
+console.log(frase.substring(0,10)); // Cortar un string indicando el índice de cada caracter
