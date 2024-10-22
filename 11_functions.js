@@ -51,11 +51,39 @@ console.log(`Price with discount: ${finalPrice}`);
     6. Almacenar funciones en objetos -> métodos
     */
 
-    const rocket = {
-        name: 'Falcon 9',
-        launchMessage: function launchMessage() {
-            console.log('Despegue')
-        }
+const rocket = {
+    name: 'Falcon 9',
+    launchMessage: function launchMessage() {
+        console.log('Despegue')
     }
+};
 
-    rocket.launchMessage()
+rocket.launchMessage()
+
+/*
+FUNCIONES PURAS -> Siempre va a recibir los mismos parámetros y siempre va a tener la misma salida
+
+function sum(a, b) {
+    return a + b;
+}
+
+Side effects que hacen que una función deje de ser pura:
+    1. Modificar variables globales
+    2. Modificar parámetros de una función
+    3. Llamados o solicitudes a HTTP
+    4. Imprimir mensajes en pantalla o en código
+    5. Manipulación del DOM
+    6. Obtener la hora actual
+
+function sum(a, b) {
+    console.log('A: ', a);
+    return a + b;
+}
+
+let total = 0;
+
+function sumWithSideEffect(a) {
+    total += a;
+    return total;
+}
+*/
