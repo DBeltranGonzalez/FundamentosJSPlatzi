@@ -74,3 +74,16 @@ const paisesFrecuencia = paises.reduce((accumulator, currentValue) => {
 }, {})
 
 console.log(paisesFrecuencia);
+
+// 6. find(): devolver el primer elemento que cumpla una condición
+
+const multiplesOf3 = [3, 6, 9, 12, 15, 18];
+const greaterThan10 = multiplesOf3.find(number => number > 10);
+
+console.log(multiplesOf3);
+console.log(greaterThan10);
+
+// 7. findIndex(): encontrar el índice del elemento
+
+const indexOfMultipleOf5 = multiplesOf3.findIndex(number => number % 5 === 0);
+console.log(indexOfMultipleOf5)
