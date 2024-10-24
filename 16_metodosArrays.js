@@ -87,3 +87,11 @@ console.log(greaterThan10);
 
 const indexOfMultipleOf5 = multiplesOf3.findIndex(number => number % 5 === 0);
 console.log(indexOfMultipleOf5)
+
+// 8. slice(): 
+
+const animales = ['hormiga', 'elefante', 'camello', 'pato', 'oso']
+console.log(animales.slice(2)); // corta el array a partir de la posición 2
+console.log(animales.slice(1, 5)); //corta el array desde elemento en posición 1 hasta la 4
+console.log(animales.slice(-2)); //últimos dos elementos del array
+console.log(animales.slice(1, -1)); //desde posición 1 hasta el penúltimo elemento del array
