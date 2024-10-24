@@ -18,8 +18,25 @@ console.log(removeFruit); // Devuelve el elemento removido
 
 // Inmutabilidad
 
-// concat([]) para concatenar un array
+// 1. concat([]): para concatenar un array
 
 const newFruits = fruits.concat(['grape', 'kiwi']);
 console.log(fruits);
 console.log(newFruits);
+
+// 2. map(): aplicar una transformación a cada elemento de un array sin mutar el original
+
+const numbersFibonacci = [0,1,1,2,3,5,8,13,21,34];
+const squareNumbers = numbersFibonacci.map(element => element * element);
+
+console.log(numbersFibonacci);
+console.log(squareNumbers);
+
+// 3. forEach(): recorre el array retornando un valor único
+
+let sumaFibonacci = 0;
+numbersFibonacci.forEach(element => {
+    sumaFibonacci += element
+});
+console.log(numbersFibonacci);
+console.log(sumaFibonacci);
