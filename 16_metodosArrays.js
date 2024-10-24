@@ -95,3 +95,32 @@ console.log(animales.slice(2)); // corta el array a partir de la posición 2
 console.log(animales.slice(1, 5)); //corta el array desde elemento en posición 1 hasta la 4
 console.log(animales.slice(-2)); //últimos dos elementos del array
 console.log(animales.slice(1, -1)); //desde posición 1 hasta el penúltimo elemento del array
+
+/* 9. spread operators: para hacer varias cosas con arrays
+
+9.1 Copiar arrays
+9.2 Concatenar arrays
+9.3 Añadir elementos a un array
+9.4 Pasar un arry como parámetro de una función */
+
+const ciudadesColombia = ['Bogota', 'Monteria', 'San Andres'];
+const copyCiudadesColombia = [...ciudadesColombia];
+
+console.log(ciudadesColombia);
+console.log(copyCiudadesColombia);
+
+const otrasCiudades = ['Santa Marta', 'Cartagena', 'Ibague'];
+const concatenandoCiudades = [...ciudadesColombia, ...otrasCiudades];
+console.log(concatenandoCiudades);
+
+const anadiendoCiudades = [...concatenandoCiudades, 'Tunja', 'Neiva', 'Barranquilla'];
+console.log(anadiendoCiudades);
+
+const cuadrados = [1,4,9,16,25];
+
+function multiplicacion(a,b,c,d,e) {
+    return a * b * c * d * e
+}
+
+const impresionMultiplicacion = multiplicacion(...cuadrados);
+console.log(impresionMultiplicacion);
