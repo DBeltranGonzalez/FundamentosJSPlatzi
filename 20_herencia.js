@@ -26,3 +26,13 @@ const perro1 = new Perro('Max', 'Perro', 'Husky');
 console.log(perro1);
 perro1.correr();
 perro1.emitirSonido();
+
+// Este nuevo método solo se añade a la nueva instancia:
+perro1.nuevoMetodo = function() {
+    console.log('Este es un nuevo método');
+}
+
+// Añadir un nuevo prototipo a la clase animal
+perro1.prototype.segundoMetodo = function() {
+    console.log('Este es un nuevo método');
+}
