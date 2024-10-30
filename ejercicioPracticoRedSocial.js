@@ -40,3 +40,18 @@ const usersTimeLine = [
         timeline: 'Hoy no se trabaja :D',
     },
 ];
+
+class Usuario {
+    constructor(username, password) {
+        this.username = username,
+        this.password = password
+    }
+};
+
+users = {};
+
+for (persona of usersDatabase) {
+    users = new Usuario(persona.username, persona.password);
+}
+
+console.log(users);
