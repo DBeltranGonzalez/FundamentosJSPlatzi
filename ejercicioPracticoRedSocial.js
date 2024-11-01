@@ -2,7 +2,7 @@
 Requerimientos del reto:
 
 1. El usuario debe poder ingresar su usuario y contraseña
-2. El sistema debe ser capaz de validar si el usuario y contraseña ingresados por el usuario exiten en la base de datos
+2. El sistema debe ser capaz de validar si el usuario y contraseña ingresados por el usuario existen en la base de datos
 3. Si el usuario y contraseña son correctos, el sistema debe mostrar un mensaje de bienvenia y mostrar el timeline del usuario.
 4. Si el usuario y contraseña son incorrectos, el sistema debe mostrar un mensaje de error y no mostrar ningún timeline.
 */
@@ -41,17 +41,22 @@ const usersTimeLine = [
     },
 ];
 
-class Usuario {
-    constructor(username, password) {
-        this.username = username,
-        this.password = password
+// SOLUCIÓN PERSONAL
+const user = prompt('Usuario: '); // Solicitud a usuario para que ingrese el usuario 
+const password = prompt('Password: '); // Solicitud a usuario para que ingrese la contraseña 
+
+function verification(username, password) {
+    for(persona of usersDatabase) {
+        if ((persona.username === username) && (persona.password === password)) {
+            console.log(`Bienvenido ${persona.username}!!!`);
+            console.log('Resumen de tu timeline:');
+            for (timeLine of usersTimeLine) {
+                console.log(`${timeLine.username}: ${timeLine.timeline}`);
+            }
+        } else {
+            console.log('Las credenciales que proporcionaste no corresponden a lo requerido');
+        }
     }
-};
-
-users = {};
-
-for (persona of usersDatabase) {
-    users = new Usuario(persona.username, persona.password);
 }
 
-console.log(users);
+verification(user,password);
