@@ -41,7 +41,8 @@ const usersTimeLine = [
     },
 ];
 
-// SOLUCIÓN PERSONAL
+// SOLUCIÓN PERSONAL --> Confirmado el envío del repositorio a GitHub:
+
 const user = prompt('Usuario: '); // Solicitud a usuario para que ingrese el usuario 
 const password = prompt('Password: '); // Solicitud a usuario para que ingrese la contraseña 
 
