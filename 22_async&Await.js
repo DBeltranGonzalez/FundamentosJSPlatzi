@@ -18,3 +18,26 @@ async function newFetch() {
         console.log(error);
     }
 }
+
+// Uso de for para cargar múltiples promesas de un arreglo:
+
+const apis = [
+    'https://swapi.dev/api/films/',
+    'https://swapi.dev/api/people/',
+    'https://swapi.dev/api/planets/',
+    'https://swapi.dev/api/species/',
+    'https://swapi.dev/api/starships/',
+    'https://swapi.dev/api/vehicles/'
+];
+
+async function fetchDataFor() {
+    try {
+        for await(let api of apis) {
+            let response = await fetch(api);
+            let data = await response.json();
+            console.log(data);
+        }
+    } catch(error) {
+        console.log(error);
+    }
+}
